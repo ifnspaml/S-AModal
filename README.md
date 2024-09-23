@@ -1,5 +1,5 @@
 # S-AModal
-![Static Badge](https://img.shields.io/badge/build-upload_in_progress-pink)
+![Static Badge](https://img.shields.io/badge/upload_status-upload_in_progress-pink)
 > Foundation Models for Amodal Video Instance
 Segmentation in Automated Driving \
 > Jasmin Breitenstein, Franz Jünger, Andreas Bär, Tim Fingscheidt \
