@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import pycocotools.mask as mask_utils
 from vst_main.Testing import VST_test_once
-
+import cv2
 
 def convert_to_json_serializable(data):
     if isinstance(data, torch.Tensor):
@@ -179,3 +179,11 @@ def get_saliency_point(img, mask, img_name, save_img_path=None):
     vst_random_point = [vst_roi_random_point[0] + xmin - 10, vst_roi_random_point[1] + ymin - 10]
 
     return vst_random_point
+
+def move_mask(previous_mask, displacement):
+    # Shift the mask using affine transformation
+    rows, cols = previous_mask.shape[:2]
+    M = np.float32(
+        [[1, 0, displacement[0]], [0, 1, displacement[1]]])
+    shifted_mask = cv2.warpAffine(previous_mask, M, (cols, rows))
+    return shifted_mask
