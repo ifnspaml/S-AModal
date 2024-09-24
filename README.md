@@ -51,11 +51,17 @@ pip install opencv-python pycocotools matplotlib onnxruntime onnx
 ```bash
 pip install -r requirements.txt
 ```
+- For saliency point augmentation, please clone the visual saliency transformer [repository](https://github.com/nnizhang/VST)
+```bash
+git clone https://github.com/nnizhang/VST.git
+```
+## Usage 
+todo
 
-##Usage 
+## Acknowledgements
+todo
 
-##Acknowledgements
-
-##License
+## License
+todo
 
 

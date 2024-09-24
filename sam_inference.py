@@ -289,7 +289,7 @@ def main(args):
         # Step 2: Format predictions and ground truth annotations into COCOeval format
         import json
         if 'kins' in dataset:
-            coco_gt = COCO('ground_truth_annotations_kins_test.json')#TODO
+            coco_gt = COCO('ground_truth_annotations_kins_test.json')
             predictions_name = args['save_path']#predictions_kins.json'
 
         elif 'asd' in dataset:
