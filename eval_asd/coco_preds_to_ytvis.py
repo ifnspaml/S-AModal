@@ -4,7 +4,6 @@
 # 1 stage evaluation possible and results do not change
 # our own code for S-AModal
 
-
 import cvbase as cvb
 import numpy as np
 import os
@@ -13,15 +12,11 @@ import json
 from pycocotools.coco import COCO
 from ..evaluation.ap_evaluation import customCOCOeval as COCOeval
 from ..evaluation.eval_vis import eval_vis
-from sam_pt.point_tracker.cotracker import CoTrackerPointTracker
+from ..sam_pt.point_tracker.cotracker import CoTrackerPointTracker
 import torch
 import cv2
 import matplotlib.pyplot as plt
 from ..utils.helper_functions import *
-
-
-
-
 
 pred_data_sam = '/beegfs/work/breitenstein/segment-anything/predictions_asd_wgt_run1.json'
 coco_preds = cvb.load(pred_data_sam)
@@ -146,7 +141,7 @@ visibility_threshold = 0.7
 support_grid_size = 2
 support_grid_every_n_frames = 12
 add_debug_visualisations = False
-pointpath = '/beegfs/work/breitenstein/sam-pt/models/cotracker_ckpts/cotracker_stride_4_wind_8.pth'
+pointpath = '../pt_checkpoint/cotracker_stride_4_wind_8.pth'
 point_tracker = CoTrackerPointTracker(pointpath, interp_shape, visibility_threshold,
                                       support_grid_size, support_grid_every_n_frames, add_debug_visualisations)
 

@@ -12,7 +12,7 @@ import json
 from pycocotools.coco import COCO
 from ..evaluation.ap_evaluation import customCOCOeval as COCOeval
 from ..evaluation.eval_vis import eval_vis
-from sam_pt.point_tracker.cotracker import CoTrackerPointTracker
+from ..sam_pt.point_tracker.cotracker import CoTrackerPointTracker
 import torch
 import cv2
 import matplotlib.pyplot as plt

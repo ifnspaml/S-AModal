@@ -17,13 +17,6 @@ from pycocotools.coco import COCO
 import pycocotools.mask as mask_utils
 from tqdm import tqdm
 
-
-
-
-
-
-
-
 def main(args):
     single_image = False
 
@@ -152,31 +145,18 @@ def main(args):
     else:
         #trainset,testset = get_kins_dataset(0,sam, sam_trans=transform, test=True)
 
-        if 'kins' in dataset:
-            image_root = "/beegfs/data/shared/kitti-kins/KINS_Video_Car/Kins/training/image_2/"
-            gt_root = "/beegfs/work/shared/kitti-kins/update_test_2020.json"
-            transform_train, transform_test = get_kins_transform()
-            testset = KINSDataset(image_root, gt_root, sam, train=False, augmentations=transform_test, sam_trans=transform, test=True)
-            catId = 1
-        elif 'asd' in dataset:
+        if 'asd' in dataset:
             image_root = "/beegfs/data/shared/amodal_synth_drive_new_split/val/images/front/"
             gt_root = "/beegfs/data/shared/amodal_synth_drive_new_split/val/amodal_instance_seg/front/"
-            transform_train, transform_test = get_kins_transform()
-            testset = ASD_Dataset(image_root, gt_root, sam, train=False, augmentations=transform_test, sam_trans=transform, test=True,
+            testset = ASD_Dataset(image_root, gt_root, sam, train=False, sam_trans=transform, test=True,
                                   pt_augmentation=pt_augmentation, num_points= num_points)
             catId = 24
         elif 'kcar' in dataset:
             image_root = "/beegfs/data/shared/kitti-kins/KINS_Video_Car/Kins/training/image_2/"
             gt_root = "/beegfs/data/shared/kitti-kins/KINS_Video_Car/car_data/test_data.pkl"
-            transform_train, transform_test = get_kins_transform()
-            testset = KINSCarDataset(image_root, gt_root, sam, train=False, augmentations=transform_test, sam_trans=transform, test=True)
+            testset = KINSCarDataset(image_root, gt_root, sam, train=False, sam_trans=transform, test=True)
             catId = 4
-        elif 'sailvos' in dataset:
-            image_root = "/beegfs/work/shared/kangdong_shared/sailvos_cut_png/"
-            gt_root = "/beegfs/work/shared/kangdong_shared/sailvos_cut_json/png_amodal/valid_less0.75_png_amodal.json"
-            transform_train, transform_test = get_kins_transform()
-            testset = SailVos_Dataset(image_root, gt_root, sam, train=False, augmentations=transform_test, sam_trans=transform, test=True)
-            catId = 1
+
 
 
 
