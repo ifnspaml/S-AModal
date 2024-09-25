@@ -114,7 +114,7 @@ The structure of the files is slightly different in this case.
 
 This repository benefits from the works of [Segment Anything](https://github.com/facebookresearch/segment-anything/tree/main), 
 [Segment Anything Meets Point Tracking](https://github.com/SysCV/sam-pt/tree/main), [AutoSAM](https://github.com/talshaharabany/AutoSAM/tree/main), 
-[Medical SAM Adapter](https://github.com/MedicineToken/Medical-SAM-Adapter/tree/main) and [SAM-Adapter-PyTorch](https://github.com/tianrun-chen/SAM-Adapter-PyTorch/tree/main).
+[Medical SAM Adapter](https://github.com/MedicineToken/Medical-SAM-Adapter/tree/main), [SAMAug](https://github.com/yhydhx/SAMAug/tree/main) and [SAM-Adapter-PyTorch](https://github.com/tianrun-chen/SAM-Adapter-PyTorch/tree/main).
 Thanks to the authors for their amazing work and for publishing their code!
 
 ## Citing S-AModal
