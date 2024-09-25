@@ -1,12 +1,9 @@
 # S-AModal
-![Static Badge](https://img.shields.io/badge/upload_status-upload_in_progress-pink)
-> Foundation Models for Amodal Video Instance
-Segmentation in Automated Driving \
-> Jasmin Breitenstein, Franz Jünger, Andreas Bär, Tim Fingscheidt \
-> TU Braunschweig, Institute for Communications Technology
 
-This repository contains the code to our paper "Foundation Models for Amodal Video Instance
-Segmentation in Automated Driving".
+[**Foundation Models for Amodal Video Instance
+Segmentation in Automated Driving**](https://arxiv.org/abs/2409.14095) \
+Jasmin Breitenstein, Franz Jünger, Andreas Bär, Tim Fingscheidt \
+TU Braunschweig, Institute for Communications Technology
 
 ![S-AModal Result Visualizations](figures/git_visualization.gif)
 
